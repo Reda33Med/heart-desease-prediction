@@ -43,3 +43,12 @@ heart-disease-prediction/
    ```bash
    python train.py
    ```
+
+
+## 📊 Results
+
+The model pipeline is evaluated on the held-out test set using the **ROC-AUC score**:
+
+| Model | Evaluation Metric | Score |
+| :--- | :--- | :--- |
+| Random Forest Classifier | ROC-AUC | ~0.85+ |
