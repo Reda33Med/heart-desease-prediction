@@ -1,0 +1,28 @@
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.decomposition import PCA
+from sklearn.pipeline import Pipeline
+from preprocessing import build_preprocessor
+
+
+def choose_model(model_name: str) -> Pipeline:
+    """Choose and return a machine learning pipeline based on the provided model name."""
+
+    # 1. Select the classifier object based on model_name
+    if model_name == "svm":
+        classifier = SVC(probability=True, random_state=42)
+    elif model_name == "random_forest":
+        classifier = RandomForestClassifier()
+    else:
+        raise ValueError(
+            "Invalid model name. Choose 'svm' or 'random_forest'."
+        )
+
+    # 2. Construct and return a single Pipeline
+    return Pipeline(
+        [
+            ("preprocessor", build_preprocessor()),
+            ("pca", PCA(n_components=5)),
+            ("classifier", classifier),
+        ]
+    )
