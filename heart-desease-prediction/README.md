@@ -26,18 +26,20 @@ heart-disease-prediction/
 ## 🚀 Quickstart & Installation
 
 1. **Clone the repository and enter the directory**:
+
+    ```bash
    git clone [https://github.com/Reda33Med/heart-disease-prediction.git](https://github.com/Reda33Med/heart-disease-prediction.git)
-   
-   ```bash
    cd heart-disease-prediction
    ```
 
 2. **Install required packages**:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Train the model**:
+
    ```bash
    python train.py
    ```
