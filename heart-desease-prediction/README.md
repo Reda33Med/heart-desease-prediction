@@ -28,7 +28,7 @@ heart-disease-prediction/
 1. **Clone the repository and enter the directory**:
 
     ```bash
-   git clone [https://github.com/Reda33Med/heart-disease-prediction.git](https://github.com/Reda33Med/heart-disease-prediction.git)
+   git clone https://github.com/Reda33Med/heart-disease-prediction.git
    cd heart-disease-prediction
    ```
 
