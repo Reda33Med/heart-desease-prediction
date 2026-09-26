@@ -48,7 +48,7 @@ def split_data(
         X,
         y,
         test_size=test_size,
-        random_state=random_state
+        random_state=random_state,
         stratify=y
     )
 
