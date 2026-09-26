@@ -2,7 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline
-from preprocessing import build_preprocessor
+from src.preprocessing import build_preprocessor
 
 
 def choose_model(model_name: str) -> Pipeline:
