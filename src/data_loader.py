@@ -8,6 +8,7 @@ def load_data(
         file_path: Path,
         target_column: str = "target"
         ) -> Tuple[pd.DataFrame, pd.Series]:
+    
     """Load the heart disease dataset and split it into features (X) and target (y).
 
     Parameters:
@@ -17,7 +18,11 @@ def load_data(
     Returns:
         Tuple[pd.DataFrame, pd.Series]: Features DataFrame (X) and Target Series (y).
     """
+
     df = pd.read_csv(file_path)
+
+    if target_column not in df.columns:
+        raise ValueError(f"Target column '{target_column}' not found in the dataset.")
 
     X = df.drop(columns=[target_column])
     y = df[target_column]
